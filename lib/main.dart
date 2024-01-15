@@ -35,15 +35,17 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        padding: const EdgeInsets.all(20),
-        shrinkWrap: true,
-        children: const [
-          CustomButton(
-            title: 'Ticker',
-            child: TickerPage(),
-          ),
-        ],
+      body: Center(
+        child: ListView(
+          padding: const EdgeInsets.all(20),
+          shrinkWrap: true,
+          children: const [
+            CustomButton(
+              title: 'Ticker',
+              child: TickerPage(),
+            ),
+          ],
+        ),
       ),
     );
   }
