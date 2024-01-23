@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'pages/ticker/ticker_page.dart';
+import 'pages/timer/timer_page.dart';
 import 'widgets/cutom_button.dart';
 
 void main() {
@@ -43,6 +44,10 @@ class MyHomePage extends StatelessWidget {
             CustomButton(
               title: 'Ticker',
               child: TickerPage(),
+            ),
+            CustomButton(
+              title: 'Timer',
+              child: TimerPage(),
             ),
           ],
         ),
