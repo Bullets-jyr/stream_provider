@@ -7,6 +7,7 @@ part 'ticker_provider.g.dart';
 //   ref.onDispose(() {
 //     print('[tickerProvider] disposed');
 //   });
+//   0부터 시작합니다.
 //   return Stream.periodic(const Duration(seconds: 1), (t) => t + 1).take(60);
 // });
 
