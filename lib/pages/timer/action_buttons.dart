@@ -18,6 +18,7 @@ class ActionButtons extends ConsumerWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
+        // spread operator
         ...switch (state.value!) {
           TimerInitial() => [
             FloatingActionButton(

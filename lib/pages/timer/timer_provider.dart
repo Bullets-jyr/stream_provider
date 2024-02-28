@@ -36,6 +36,7 @@ class Timer extends _$Timer {
 
   void pauseTimer() {
     switch (state.value!) {
+      // pattern matching
       case TimerRunning(:int duration):
         _tickerSubscription?.pause();
         state = AsyncData(TimerPaused(duration));
@@ -45,6 +46,7 @@ class Timer extends _$Timer {
 
   void resumeTimer() {
     switch (state.value!) {
+      // pattern matching
       case TimerPaused(:int duration):
         _tickerSubscription?.resume();
         state = AsyncData(TimerRunning(duration));

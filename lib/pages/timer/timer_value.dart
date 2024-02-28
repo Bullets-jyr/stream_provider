@@ -22,11 +22,13 @@ class TimerValue extends ConsumerWidget {
     final timerState = ref.watch(timerProvider);
     print(timerState);
 
+    // AsyncData || orElse
     return timerState.maybeWhen(
       data: (value) => Text(
         formatTimer(value.duration),
         style: Theme.of(context).textTheme.headlineLarge,
       ),
+      // 필수
       orElse: () => const SizedBox.shrink(),
     );
   }

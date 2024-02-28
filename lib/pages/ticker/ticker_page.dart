@@ -7,6 +7,7 @@ class TickerPage extends ConsumerWidget {
   const TickerPage({super.key});
 
   String zeroPaddedTwoDigits(double ticks) {
+    // ticks보다 작은 가장 큰 integer
     return ticks.floor().toString().padLeft(2, '0');
   }
 
