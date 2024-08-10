@@ -29,8 +29,9 @@ Stream<int> ticker(TickerRef ref) {
 // 주식정보가 변할 때마다 알려주는 앱등이 있습니다. 이런 앱은 데이터가 자주 변하기 때문에 매번 새로운 데이터가 생길 때 마다
 // 커넥션을 셋업하고 데이터를 송-수신하는 것 보다는 커넥션 셋업후 커넥션을 계속 열어둔 상태에서 data를 주고 받는 것이 더 효율적입니다.
 
+// 가장 기본적인 형태의 streamProvider에 대해 알아보겠습니다.
 // ticker_provider.dart 파일을 오픈한 후 flutter_riverpod package를 import하겠습니다.
-// 다음으로 streamProvider code snipet generator를 이용해 streamProvider template를 만든 후
+// 다음으로 streamProvider code snippet generator를 이용해 streamProvider template를 만든 후
 // 이름을 tickerProvider로 수정하 타입으로 integer를 줍니다. async*는 삭제하고 function body에서
 // stream.periodic factory constructor를 이용해 1초마다 반복적으로 이벤트를 emit하는 stream을 create합니다.
 // event의 value들은 callback 함수를 매 1초마다 호출해서 계산을 합니다.
@@ -47,6 +48,8 @@ Stream<int> ticker(TickerRef ref) {
 // manual하게 Provider를 generate시켰을 경우에는 반대로 keepAlive가 default인점 기억하시기 바랍니다.
 // 만약 riverpod_generator를 사용해서 만든 Provider를 autoDispose가 아닌 keepAlive Provider로 만들기 위해서는
 // 대문자 R Riverpod로 어노테이션한 후 keepAlive argument의 값으로 true를 줘야한다는 점도 기억하시기 바랍니다.
-// 그리고 최근에 StreamNotifier가 추가되었습니다. StreamNotifier에는 뒤에서 살펴볼 StateNotifier, Notifier, AsyncNotifier와
-// 유사하게 Stream과 관련된 복잡한 비즈니스 로직을 사용할 수 있습니다. StreamNotifier에 대해서는 AsyncNotifier를 알아보는 설명을 드리겠습니다.
+// 그리고 최근에 StreamNotifier가 추가되었습니다.
+// StreamNotifier에는 뒤에서 살펴볼 StateNotifier, Notifier, AsyncNotifier와
+// 유사하게 Stream과 관련된 복잡한 비즈니스 로직을 사용할 수 있습니다.
+// StreamNotifier에 대해서는 AsyncNotifier를 알아보는 설명을 드리겠습니다.
 // 그때도 지금의 stream_provider 앱을 사용할 예정입니다.

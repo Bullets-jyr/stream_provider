@@ -22,6 +22,7 @@ class TimerValue extends ConsumerWidget {
     final timerState = ref.watch(timerProvider);
     print(timerState);
 
+    // 2가지 경우만 필요
     // AsyncData || orElse
     return timerState.maybeWhen(
       data: (value) => Text(
