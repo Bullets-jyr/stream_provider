@@ -8,6 +8,7 @@ part 'ticker_provider.g.dart';
 //     print('[tickerProvider] disposed');
 //   });
 //   0부터 시작합니다.
+//   1초마다 1씩 증가하는 argument를 받아 argument에 1을 더한 값을 return 합니다.
 //   return Stream.periodic(const Duration(seconds: 1), (t) => t + 1).take(60);
 // });
 
